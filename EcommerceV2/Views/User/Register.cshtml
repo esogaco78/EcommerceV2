@@ -1,0 +1,36 @@
+﻿
+@model EcommerceV2.Models.User
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Register</h2>
+
+<br />
+<br />
+<br />
+
+@using (Html.BeginForm("Create", "User", FormMethod.Post))
+{
+    <div class="form-group">
+        @*<label for="Email">Email</label>
+        <input id="Email" name="Email" class="form-control" type="email" aria-describedby="emailHelp" placeholder="Enter email"/>*@
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, htmlAttributes: new { @class = "form-control", @placeholder = "Enter email" })
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
+        @*<input type="password" class="form-control" id="Password" name="Password" placeholder="Password">*@
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @placeholder = "Enter password", @type = "password" })
+        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        @*@Html.ValidationMessageFor(m => m.Password, "Enter a password")*@
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Register</button>
+    
+}
+

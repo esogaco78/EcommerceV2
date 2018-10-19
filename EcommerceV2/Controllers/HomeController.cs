@@ -50,21 +50,5 @@ namespace EcommerceV2.Controllers
             return View("Login");
         }
 
-        /*
-        [HttpGet]
-        public ActionResult Register()
-        {
-            return View("Register");
-        }
-
-        [HttpPost]
-        public ActionResult Register(User user)
-        {
-            var db = new DataAccess();
-
-            return View("Register");
-        }
-        */
-
     }
 }

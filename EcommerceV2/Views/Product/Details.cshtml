@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="~/Content/imgs/examplePic2.PNG" class="img-responsive" alt="Responsive image" />
+    </div>
+    <div class="col-md-6">
+        <h2>@ViewBag.Product.Name</h2>
+        <p>@ViewBag.Product.Description</p>
+        <h3>$@ViewBag.Product.Price</h3>
+        <a class="btn btn-primary" href="/Order/CheckoutStep1" role="button">Purchase</a>
+    </div>
+</div>
+<div class="row">
+</div>
+

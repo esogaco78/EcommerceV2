@@ -13,7 +13,7 @@ namespace EcommerceV2.CustomValidation
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var db = new DataAccess();
-            List<string> emails = db.SelectAllUserEmails().ToList();
+            List<string> emails = db.SelectAllUserEmails();
             foreach (string s in emails)
             {
                 if (s == (string)value)

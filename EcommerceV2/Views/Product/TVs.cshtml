@@ -1,0 +1,13 @@
+﻿@using EcommerceV2.Helpers
+
+@{
+    ViewBag.Title = "TVs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TVs</h2>
+
+<div class="row">
+    @CustomHtmlHelper.ProductIndex(ViewBag.TVProducts)
+</div>
+

@@ -22,14 +22,6 @@ namespace EcommerceV2.Controllers
             return View("Index");
         }
 
-        // Display the computer product page
-        public ActionResult Computers()
-        {
-            ViewBag.Message = "Computers here.";
-
-            return View("Computers");
-        }
-
         // Display the video game product page
         public ActionResult VideoGames()
         {
